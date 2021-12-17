@@ -1,3 +1,5 @@
+# https://inf-ege.sdamgia.ru/problem?id=39764
+
 with open('17.txt', 'r') as f:
     n = f.readlines()
 
