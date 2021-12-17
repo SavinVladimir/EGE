@@ -1,0 +1,33 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main(){
+
+    unsigned int start_time =  clock();
+
+    int number, kolvodelit, k, i, j;
+
+    number = 0;
+    kolvodelit = 0;
+    for(i = 568023; i <= 569230; i++){
+        k = 0;
+        for(j = 1; j <= i; j ++){
+            if (i % j == 0){
+                k = k + 1;
+            }
+        }
+        if (k > kolvodelit){
+        kolvodelit = k;
+        number = i;
+    }
+    }
+    cout << kolvodelit << ' ' << number << endl;
+
+    unsigned int end_time = clock();
+    unsigned int search_time = end_time - start_time;
+    cout << search_time / 1000 << endl;
+    cout << search_time % 1000 << endl;
+
+    return 0;
+}
