@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+    int k, kd, i, j, minn;
+    minn = 80000;
+
+    for(i=30001;i<=70000;i++){
+        kd = 0;
+        for(j=1;j<=i;j++){
+            if(i % j == 0){
+                kd += 1;
+            }
+        }
+        if(kd > 17){
+            k += 1;
+            if(i<minn){
+                minn = i;
+            }
+        }
+    }
+
+    cout << k << minn;
+
+    return 0;
+}
